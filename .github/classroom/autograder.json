@@ -1,0 +1,9 @@
+{
+  "tests": [
+    {
+      "name": "Maven Tests",
+      "run": "mvn test",
+      "points": 100
+    }
+  ]
+}
