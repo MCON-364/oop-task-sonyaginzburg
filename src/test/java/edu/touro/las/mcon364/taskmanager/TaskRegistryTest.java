@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -23,7 +25,7 @@ class TaskRegistryTest {
         Task task = new Task("Test task", Priority.HIGH);
         registry.add(task);
 
-        Task retrieved = registry.get("Test task");
+        Optional<Task> retrieved = registry.get("Test task");
         assertNotNull(retrieved, "Added task should be retrievable");
         assertEquals(task, retrieved, "Retrieved task should equal added task");
     }
